@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slide-toggle.js"></script>
+
+  <script>
+	$(function() {
+
+		function populateDiv ( eDiv ) {
+			eDiv.html( "This is the container div");
+		}
+
+		$( "a" ).customSlideToggle( {
+			'initstate'    : 'close',
+			'callback'     : populateDiv,
+			'duration'     : 1000,
+			'containercss' : {
+				'width' : '300px',
+				'background-color': 'red'
+			}
+
+		} );
+
+		$("button").customSlideToggle( {
+			'initstate'    : 'close',
+			'callback'     : populateDiv,
+			'duration'     : 1000,
+			'containercss' : {
+				'width' : '300px'
+			}
+		} );
+
+	});
+  </script>
+
+</head>
+
+
+<body>
+
+	<button>Toggle between hide() and show()</button>
+
+	<a href="#" style = 'display : block;'> Link </a>
+
+	<div> The quick brown fox jumps </div>
+
+</body>
+
+</html>
